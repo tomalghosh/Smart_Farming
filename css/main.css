@@ -1,0 +1,61 @@
+body {
+    background-color: #f7f7f7;
+}
+
+.navbar {
+    height: 80px;
+    background-color: white;
+    -webkit-box-shadow: 0px -8px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -8px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -8px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.nav-item.logout {
+    font-size: 1.2rem;
+    padding-right: 2rem;
+    transition: letter-spacing 0.3s;
+}
+
+.nav-item.logout:hover {
+    letter-spacing: 0.1rem;
+}
+
+.card.weathercard {
+    left: 2%;
+    text-align: center;
+    position: relative;
+    width: 18%;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 5px;
+    -webkit-box-shadow: 0px 0px 14px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 14px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 14px -10px rgba(0, 0, 0, 0.75);
+}
+
+p#date {
+    margin: 0;
+}
+
+.card.plantscard {
+    left: 2%;
+    margin-top: 1%;
+    text-align: center;
+    width: 18%;
+    position: absolute;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 5px;
+    -webkit-box-shadow: 0px 0px 14px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 14px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 14px -10px rgba(0, 0, 0, 0.75);
+}
+
+a.greenlink {
+    color: #378386;
+    text-decoration: none;
+}
+
+a.greenlink:hover {
+    color: #1d4648;
+}
