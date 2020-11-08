@@ -59,3 +59,105 @@ a.greenlink {
 a.greenlink:hover {
     color: #1d4648;
 }
+
+
+/*Popup*/
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Black w/ opacity */
+}
+
+
+/* Popup Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+    border-radius: 10px;
+}
+
+
+/* The Close Button */
+
+.closebutton {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closebutton:hover,
+.closebutton:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card.valcard {
+    left: 21%;
+    margin-top: -4.5%;
+    text-align: center;
+    width: 28%;
+    position: absolute;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 15px;
+    -webkit-box-shadow: 0px 0px 14px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 14px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 14px -10px rgba(0, 0, 0, 0.75);
+}
+
+.circle1 {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    background-color: #378386;
+    border-radius: 50%;
+    margin-right: 4%;
+    -webkit-box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
+    -moz-box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
+    box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
+}
+
+.circle2 {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    background-color: #378386;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
+    -moz-box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
+    box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
+}
+
+.circle3 {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    background-color: #378386;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
+    -moz-box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
+    box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
+}
