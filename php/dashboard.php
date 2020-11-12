@@ -1,3 +1,12 @@
+<?php
+// session_start();
+include('functions.php');
+
+	if (!isLoggedIn()) {
+		$_SESSION['msg'] = "You must log in first";
+		header('location: login.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +38,7 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item active logout">
-                    <a class="nav-link" href="#">Logout <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    <a class="nav-link" href="login.php?logout='1'">Logout <i class="fa fa-sign-out" aria-hidden="true"></i>
                     </a>
                 </li>
             </ul>
@@ -49,7 +58,7 @@
         <!--Content-->
         <div class="modal-content">
             <span class="closebutton">&times;</span>
-            <form class="form-inline my-2 my-lg-0">
+            <form class="form-inline my-2 my-lg-0 searchfield">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
@@ -57,10 +66,20 @@
     </div>
     <!--Parameter Card-->
     <div class="card valcard">
-        <h3 style="color:#378386; margin-bottom: 40px;">Plant Name</h3>
-        <span><div class="circle1"></div>
-        <div class="circle2"></div></span>
-        <div class="circle3"></div>
+        <h4 style="color:black; margin-bottom: 40px;">Plant Name</h3>
+        
+        <!-- <h4 style="color:black; margin-bottom: 40px;"><?php //echo $_SESSION['admin_username']; ?></h3> -->      <!-- variable name print karne ke liye -->
+        
+
+            <span>
+            <div class="circle1"><br><br><span style="font-size: 20px;"><b>Moisture</b><br>14%</span></div>
+    <div class="circle2"><br><br><span style="font-size: 20px;"><b>pH</b><br>5.3</span></div>
+    </span>
+    <div class="circle3"><br><br><span style="font-size: 20px;"><b>Nutrients</b><br>Nitrogen: 29%<br>Phosphorus: 19%</span></div>
+    <div class="row" style="margin-top: 20px;">
+        <div class="col"><button class="btngreen">Demand</button></div>
+        <div class="col"><button class="btngreen">Pesticide</button></div>
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
