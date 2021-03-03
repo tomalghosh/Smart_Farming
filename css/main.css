@@ -129,10 +129,13 @@ a.greenlink:hover {
 }
 
 .circle1 {
-    display: inline-block;
+    position: absolute;
     height: 150px;
     width: 150px;
     background-color: #378386;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
     border-radius: 50%;
     margin-right: 4%;
     -webkit-box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
@@ -141,10 +144,12 @@ a.greenlink:hover {
 }
 
 .circle2 {
-    display: inline-block;
+    position: absolute;
     height: 150px;
     width: 150px;
+    margin-left: 50%;
     background-color: #378386;
+    color: white;
     border-radius: 50%;
     -webkit-box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
     -moz-box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
@@ -153,11 +158,33 @@ a.greenlink:hover {
 
 .circle3 {
     margin: auto;
+    color: white;
     height: 200px;
     width: 200px;
+    margin-top: 50%;
     background-color: #378386;
     border-radius: 50%;
     -webkit-box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
     -moz-box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
     box-shadow: 0px 0px 18px 0px rgba(55, 131, 134, 1);
+}
+
+.btngreen {
+    width: 90%;
+    border: 2px solid #378386;
+    border-radius: 10px;
+    background-color: white;
+    color: #378386;
+    padding: 3px 5px;
+    transition: all 0.2s ease-in;
+}
+
+.btngreen:hover {
+    background-color: #378386;
+    color: white;
+    font-weight: 700;
+}
+
+.searchfield {
+    margin: auto;
 }
