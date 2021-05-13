@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <title>PlotLy dash Viz</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar sticky-top">
+        <div class="nav navbar-nav">
+            <ul class="nav navbar-nav ms-auto">
+                <a class="navbar-brand" style="color: white; font-weight: 700; text-decoration: none;" href="#">Smart Farming</a>
+                <li class="nav-item">
+                    <a href="{{url_for('index')}}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('dashboard')}}" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('crop_pred')}}" class="nav-link">Crop Prediction</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('fertilizer' )}}" class="nav-link">Fertilizer Prediction</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('fertilizer' )}}" class="nav-link">Fertilizer Suggestion</a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="nav navbar-nav ms-auto" id="right-elements">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Profile</a>
+            </li>
+        </ul>
+    </nav>
+    {% block body %}
+    <div id="crop-res">
+        <!-- <script>
+		var graphs = {{ graph | safe }};
+		Plotly.plot('bargraph' , graphs , {});
+	</script> -->
+    </div>
+    {% endblock %}
+</body>
+
+
+</html>

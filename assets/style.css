@@ -1,0 +1,24 @@
+body {
+    background-color: white;
+}
+
+.main-div {
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+#labels-input-div {
+    float: left;
+}
+
+#crop-res {
+    margin: auto;
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.28);
+    box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.28);
+    padding: 50px;
+}

@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block title %}
+    <title>Fertilizer Prediction</title>{% endblock %}
+</head>
+
+<body>
+    {% block body%}
+    <br><br>
+    <div id="crop-res">
+        <h4 style="text-align: center;"><strong>Here are some Suggestions for You!</strong></h4><br><br>
+        <p>{{ context['nrec'] }}</p>
+
+        <p>{{ context['prec'] }}</p>
+
+        <p>{{ context['krec'] }}</p>
+
+        <p>{{ context['pHrec'] }}</p>
+
+        <div>
+            <a href="{{ url_for( 'fertilizer_suggestions') }}">For more assistance on fertilizer, please visit here.</a>
+        </div>
+    </div>
+
+    <br><br> {% endblock %}
+</body>
+
+</html>

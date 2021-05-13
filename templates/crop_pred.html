@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block title %}
+    <title>CROP PREDICTION</title>{% endblock %}
+</head>
+
+<body class="body2">
+    {% block body %}
+    <!-- <div id="crop-div"> -->
+    <br><br>
+    <div id="crop-main-div">
+        <!-- <div class="container-fluid" id="crop-form-div"> -->
+        <h3 id="crop-head">Know Crops Grown in your Region</h3>
+
+        <form action="{{ url_for('crop_process') }}" method="POST">
+            <div class="form-group">
+                <label for="state-name">State Name</label>
+                <input class="form-control" type="text" placeholder="Maharashtra" id="state-name" name='state-name' />
+            </div>
+            <div class="form-group">
+                <label for="district-name">District Name</label>
+                <input class="form-control" type="text" placeholder="Kolhapur" id="district-name" name='district-name' />
+            </div>
+            <div class="form-group">
+                <label for="N">Enter the N value:</label>
+                <input class="form-control" type="number" id="N" name="n-value" placeholder="Example 80" />
+            </div>
+            <div class="form-group">
+                <label for="P">Enter the P value:</label>
+                <input class="form-control" type="number" id="P" name="p-value" placeholder="Example 40" />
+            </div>
+            <div class="form-group">
+                <label for="K">Enter the K value:</label>
+                <input class="form-control" type="number" id="K" name="k-value" placeholder="Example 40" />
+            </div>
+            <div class="form-group">
+                <label for="pH">Enter the pH value:</label>
+                <input class="form-control" type="float" id="pH" name="pH-value" placeholder="Example 5.5" />
+            </div>
+            <div id="submit-crop-div">
+                <input type="submit" name="submit" class="btn btngreen" id="submit-crop" />
+            </div>
+        </form>
+    </div><br><br>
+    <!-- </div>
+	</div> -->
+    {% endblock %}<br>
+</body>
+
+</html>

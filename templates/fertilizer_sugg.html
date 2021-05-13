@@ -1,0 +1,93 @@
+{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"-->
+    <title>Document</title>
+
+    <style>
+        .card-img-top {
+            padding: 10px;
+            height: 200px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    {% block body %}
+    <br>
+    <div id="crop-res">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-3">
+                    <form class="crop-form">
+
+                        <div class="form-group">
+                            <label for="Crop">Select Crop</label>
+                            <select class="form-control" id="crop">
+                            <option value="" selected disabled hidden>Choose a Crop</option>                            <option></option>
+                            <option>Rice</option>
+                            <option>Coffee</option>
+                            <option>Maize</option>
+                            <option>Jute</option>
+                            <option>Cotton</option>
+                            <option>Kidney Beans</option>
+                            <option>Coconut</option>
+                            <option>Black Gram</option>
+                            <option>Pigeon Peas</option>
+                            <option>Banana</option>
+                            <option>Grapes</option>
+                            <option>Apple</option>
+                            <option>Mango</option>
+                            <option>Orange</option>
+                            <option>Papaya</option>
+                            <option>Pomegranate</option>
+                        </select>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btngreen">Search Products</button>
+
+                    </form>
+                </div>
+                <div class="col-12">
+                    <div class="spinner-border my-5" style="display: none;" role="status">
+                        <span class="sr-only"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-5 product-list">
+                <!-- <div class="col-4">
+                <div class="card">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div> -->
+            </div>
+        </div>
+    </div>
+    <script src="./static/app.js"></script>
+    {% endblock %}
+</body>
+
+</html>

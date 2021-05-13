@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% block title %}
+    <title>Crop Results</title>{% endblock %}
+</head>
+
+<body>
+
+    {% block body %} {% if data["prediction"]|length == 0%}
+    <br><br>
+    <div id="crop-res">
+        <h4 style="text-align: center;"><strong>Here are the Major Crops Grown in your Region!</strong></h4><br><br>
+        <!-- <table>
+            <thead> -->
+        {% for i in data["data_for_crops_list"] %}
+        <!-- <tr>
+                    <th> -->
+        {{i}} <span>, </span>
+        <!-- </th>
+                </tr> -->
+        {% endfor %}
+        <!-- </thead>
+        </table> -->
+        {% endif %}
+        <br>
+        <br>
+        
+            {% if data["prediction"]|length == 0 %}
+
+            <P><strong>The values entered are not suitable for any crop in this region.<br> Please proceed to <a href="{{ url_for("fertilizer") }}">this page</a> for more information on fertilizers, to grow a particular crop.</strong></P>
+
+            {% else %} {% if data["prediction"]|length > 1 %}
+	    <div id="crop-res">
+            	<h3>The Crops that you can grow on your soil are: </h3>
+            	{% for i in data["prediction"] %}
+            	<p>
+                	<h4>{{ i }}</h4>
+            	</p>
+            	{% endfor %} {% else %}
+	    	<div id="crop-res">
+            		<h3>The Crops that you can grow on your soil is: </h3>
+            		<p>
+                		<h4>{{ data["prediction"][0] }}</h4>
+            		</p>
+	    	</div>
+	    
+        </div>
+        <a href="{{ url_for('crop_pred')}}" class="btn btngreen">Back</a>
+    </div>
+    {% endif %} {% endif %} {% endblock %}
+
+</body>
+
+</html>
+<!-- 	<table class="table table-striped" id="table_for_crop_list">
+			<thead>
+				<tr>
+					<th scope="col">Crop</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for crop in data["data_for_crops_list"] %}
+				<tr>
+					<td>{{crop}}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+ -->
